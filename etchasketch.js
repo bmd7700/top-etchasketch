@@ -9,25 +9,28 @@
  * 
  */ 
 
-// const testAppend = document.createElement("p");
-// testAppend.innerText = "I LIVE";
-// container.appendChild(testAppend);
 const container = document.getElementById("container");
 const addDiv = document.createElement("div");
 const userGrid = document.getElementById("userGrid");
+for(i = 0; i<16; i++){
+    appendDiv();
+    console.log('appending');
+}
 
 //called by onClick from button id "userGrid"
 function setUserGrid(){
+    while(container.firstChild){
+        container.removeChild(container.firstChild);
+        console.log('removing');
+    }
     let gridSize = prompt('Enter a number between 1 and 100: ');
     if(gridSize > 0 && gridSize <101){
         for(let i = 0; i < gridSize; i++){
-            appendDiv(container, "TEST");
+            appendDiv();
         }
     } else {alert("That is not a number between 1 and 100, you lump!")}
 }
 
-function appendDiv(nodeName, text){
-    newDiv = document.createElement("div");
-    newDiv.innerText = text;
-    nodeName.appendChild(newDiv);
+function appendDiv(){
+    container.appendChild(document.createElement("div")).className = "class1";
 }

@@ -29,12 +29,19 @@ body{
     justify-items: center;
 }
 #container{
+    display: flex;
     align-self: center;
+    flex-wrap: wrap;
     background-color: chocolate;
     width: 960px;
-    height: 960px;
+    height: auto;
     border: 1px solid black;
     border-radius: 20px;
     align-content: center;
     margin: 20px;
+}
+.class1{
+    border: 1px solid black;
+    width: 10px;
+    height: 10px;
 }
