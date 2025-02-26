@@ -11,3 +11,7 @@
 
 console.log('JS found!');
 
+const container = document.getElementById("container");
+// const testAppend = document.createElement("p");
+// testAppend.innerText = "I LIVE";
+// container.appendChild(testAppend);
