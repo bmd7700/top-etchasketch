@@ -9,9 +9,22 @@
  * 
  */ 
 
-console.log('JS found!');
-
-const container = document.getElementById("container");
 // const testAppend = document.createElement("p");
 // testAppend.innerText = "I LIVE";
 // container.appendChild(testAppend);
+const container = document.getElementById("container");
+const addDiv = document.createElement("div");
+const userGrid = document.getElementById("userGrid");
+
+//called by onClick from button id "userGrid"
+function setUserGrid(){
+    let gridSize = prompt('Enter a number between 1 and 100: ');
+    //const testAppend = document.createElement("p");
+    //testAppend.innerText = "!";
+    if(gridSize > 0 && gridSize <101){
+        for(let i = 0; i < gridSize; i++){
+            container.appendChild(document.createTextNode("!"));
+            console.log('i: ' + i);
+        }
+    } else {alert("That is not a number between 1 and 100, you lump!")}
+}
