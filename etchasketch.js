@@ -13,7 +13,6 @@
  */ 
 
 const container = document.getElementById("container");
-const cells = container.children;
 const addDiv = document.createElement("div");
 const styleSheet = document.styleSheets[0];
 const userGrid = document.getElementById("userGrid");
@@ -37,6 +36,7 @@ function setUserGrid(){
             appendDiv("userStyle");
         };
         modifyRules(gridFactor);
+        hoverColor();
         // call function to dynamically assign event listeners to grid
     } else {
         alert("That is not a number between 1 and 100, you lump!")
@@ -60,4 +60,13 @@ function modifyRules(gridFactor){
         }
     }
 
+}
+
+function hoverColor(){
+    let cells = container.children;
+    for(let i = 0; i < cells.length; i++){
+        let cell;
+        cell = cells[i];
+        cell.addEventListener('mouseenter', ()=>{cell.style.backgroundColor = 'purple';});
+    }
 }

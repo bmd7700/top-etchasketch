@@ -54,6 +54,8 @@ body {
     display: flex;
 }
 
-.style1:hover, .userStyle:hover{
+.style1:hover {
     background-color: blue;
 }
+
+/*.userStyle:hover*/
