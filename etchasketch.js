@@ -19,6 +19,7 @@ const userGrid = document.getElementById("userGrid");
 for(i = 0; i<16; i++){
     appendDiv("style1"); 
 }
+hoverColor();
 
 //called by onClick from button id "userGrid"
 function setUserGrid(){
