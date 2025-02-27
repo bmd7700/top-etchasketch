@@ -53,3 +53,7 @@ body {
 .userStyle {
     display: flex;
 }
+
+.style1:hover, .userStyle:hover{
+    background-color: blue;
+}
