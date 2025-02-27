@@ -5,8 +5,9 @@ Be mindful of borders and margins.
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
+body {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
 }
@@ -24,25 +25,29 @@ body{
     border-radius: 20px;
     padding: 10px;
 }
-#userGrid{ /*fix this later, center button*/
+#userGrid { /*fix this later, center button*/
     flex-direction: row;
     justify-items: center;
 }
-#container{
+#container {
     display: flex;
-    align-self: center;
     flex-wrap: wrap;
+    align-self: center;
+    flex-grow: 1;
     background-color: chocolate;
     width: 960px;
-    height: auto;
+    height: 960px;
     border: 1px solid black;
     border-radius: 20px;
-    align-content: center;
     margin: 20px;
 }
-.style1{
-    /*Manipulate this to get cells to fit in grid*/
-    border: 1px solid black;
-    width: 238px;
-    height: 238px;
+.style1 {
+    display:flex;
+    flex-grow: 1;
+    height: 240px;
+    width: 240px;
+}
+
+.userStyle {
+    display: flex;
 }
