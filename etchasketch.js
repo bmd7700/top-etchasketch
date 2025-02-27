@@ -1,7 +1,7 @@
 /**
  * 1. [X] Create a 16x16 grid of square divs using Javascript. 
  *      They should nest into the container div in the HTML file. 
- * 2. [ ] Set up a Hover effect so that the grid divs change color when the mouse passes
+ * 2. [X] Set up a Hover effect so that the grid divs change color when the mouse passes
  *      over them. 
  * 3. [X] Set up a button that will generate a popup asking users to select a new grid size
  *      [ ] NEED TO CHANGE MATHS FOR THIS - make branch when solving this problem.
@@ -17,7 +17,7 @@ const addDiv = document.createElement("div");
 const styleSheet = document.styleSheets[0];
 const userGrid = document.getElementById("userGrid");
 for(i = 0; i<16; i++){
-    appendDiv("style1");
+    appendDiv("style1"); 
 }
 
 //called by onClick from button id "userGrid"
