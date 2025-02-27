@@ -1,5 +1,5 @@
 /**
- * 1. [ ] Create a 16x16 grid of square divs using Javascript. 
+ * 1. [X] Create a 16x16 grid of square divs using Javascript. 
  *      They should nest into the container div in the HTML file. 
  * 2. [ ] Set up a Hover effect so that the grid divs change color when the mouse passes
  *      over them. 
@@ -13,9 +13,11 @@ const container = document.getElementById("container");
 const addDiv = document.createElement("div");
 const userGrid = document.getElementById("userGrid");
 for(i = 0; i<16; i++){
-    appendDiv();
+    appendDiv("style1");
     console.log('appending');
 }
+
+//manipulate CSS to get container cells into grid
 
 //called by onClick from button id "userGrid"
 function setUserGrid(){
@@ -31,6 +33,7 @@ function setUserGrid(){
     } else {alert("That is not a number between 1 and 100, you lump!")}
 }
 
-function appendDiv(){
-    container.appendChild(document.createElement("div")).className = "class1";
+function appendDiv(className){
+    container.appendChild(document.createElement("div")).className = className.toString();
+    console.log('appendDiv className: ' + className);
 }

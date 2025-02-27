@@ -40,8 +40,9 @@ body{
     align-content: center;
     margin: 20px;
 }
-.class1{
+.style1{
+    /*Manipulate this to get cells to fit in grid*/
     border: 1px solid black;
-    width: 10px;
-    height: 10px;
+    width: 238px;
+    height: 238px;
 }
