@@ -10,9 +10,11 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    background-color: black;
 }
 #intro {
-    background-color: aquamarine;
+    background-color: rgb(176, 214, 214);
+    color: purple;
     text-align: center;
     border: 1px solid black;
     border-radius: 20px;
@@ -21,7 +23,7 @@ body {
 #solicitGrid {
     align-self: center;
     align-content: center;
-    border: 1px dashed red;
+    background-color: rgb(176, 214, 214);
     border-radius: 20px;
     padding: 10px;
 }
@@ -34,7 +36,7 @@ body {
     flex-wrap: wrap;
     align-self: center;
     flex-grow: 1;
-    background-color: chocolate;
+    background-color: rgb(176, 214, 214);
     width: 960px;
     height: 960px;
     border: 1px solid black;
