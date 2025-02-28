@@ -1,6 +1,5 @@
 /**
  * Instructions for this exercise available at: https://www.theodinproject.com/lessons/foundations-etch-a-sketch
- * 
  */ 
 
 const container = document.getElementById("container");
@@ -54,11 +53,27 @@ function modifyRules(gridFactor){
 
 }
 
+
 function hoverColor(){
     let cells = container.children;
     for(let i = 0; i < cells.length; i++){
         let cell;
         cell = cells[i];
-        cell.addEventListener('mouseenter', ()=>{cell.style.backgroundColor = 'purple';});
+        let rgb = rgbRandomizer();
+        cell.addEventListener('mouseenter', ()=>{cell.style.backgroundColor = rgbRandomizer();});
     }
+}
+
+function rgbRandomizer(){
+    let result;
+    let r = randomNum(255).toString();
+    let g = randomNum(255).toString();
+    let b = randomNum(255).toString();
+    result = `rgb(${r}, ${g}, ${b})`;
+    console.log('RGB Randomizer: ' + result);
+    return result;
+}
+
+function randomNum(num){
+    return Math.floor(Math.random() * num);
 }
